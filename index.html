@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atanu Saha Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -11,59 +12,80 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f9;
-      color: #333;
+      font-family: 'Roboto', sans-serif;
+      background-color: #1c1c1c;
+      color: #f1f1f1;
       line-height: 1.6;
     }
     header {
-      background-color: #2c3e50;
+      background-color: #2b2d42;
       color: white;
-      padding: 1.5rem 0;
+      padding: 2rem 0;
       text-align: center;
     }
     header h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
+      font-weight: 700;
     }
     nav {
-      background: #34495e;
+      background: #8d99ae;
       padding: 1rem 0;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
       color: white;
       margin: 0 1rem;
       text-decoration: none;
       font-size: 1.2rem;
+      font-weight: bold;
     }
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 2rem auto;
       padding: 20px;
-      background: #ffffff;
+      background: #2b2d42;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
     section h2 {
-      font-size: 2rem;
-      color: #2c3e50;
-      border-bottom: 2px solid #e74c3c;
+      font-size: 2.5rem;
+      color: #ef233c;
+      border-bottom: 3px solid #ef233c;
       display: inline-block;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
     }
     ul {
-      list-style-type: disc;
-      padding-left: 20px;
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul li {
+      padding: 0.5rem 0;
     }
     footer {
-      background: #2c3e50;
+      background: #2b2d42;
       color: white;
       text-align: center;
-      padding: 1rem 0;
-      margin-top: 2rem;
+      padding: 1.5rem 0;
+      margin-top: 3rem;
+    }
+    .hero {
+      background: url('https://source.unsplash.com/1600x400/?technology') no-repeat center center/cover;
+      padding: 4rem 0;
+      text-align: center;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.5rem;
     }
   </style>
 </head>
@@ -71,7 +93,7 @@
   <header>
     <h1>Atanu Saha</h1>
     <p>MSc in Big Data Analytics | BSc(H) in Statistics</p>
-    <p>Email: <a href="mailto:atanus0001@gmail.com" style="color: white;">atanus0001@gmail.com</a> | Phone: +91 9123869488 | Location: Kanchrapara, India</p>
+    <p>Email: <a href="mailto:atanus0001@gmail.com" style="color: #ef233c;">atanus0001@gmail.com</a> | Phone: +91 9123869488</p>
   </header>
 
   <nav>
@@ -80,6 +102,11 @@
     <a href="#skills">Skills</a>
     <a href="#achievements">Achievements</a>
   </nav>
+
+  <div class="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Exploring Machine Learning, Data Science, and Innovation</p>
+  </div>
 
   <div class="container">
     <section id="projects">
