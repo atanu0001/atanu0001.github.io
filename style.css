@@ -64,3 +64,22 @@ footer a {
   color: #0077cc;
   text-decoration: none;
 }
+
+.quick-links {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.quick-links a {
+  display: inline-block;
+  margin: 0 1.2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0077cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.quick-links a:hover {
+  color: #e74c3c;
+}
