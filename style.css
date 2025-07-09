@@ -1,10 +1,10 @@
-body {
+/* body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f9f9fc;
   color: #333;
   margin: 0;
   padding: 0;
-}
+} */
 
 .container {
   max-width: 700px;
@@ -82,4 +82,12 @@ footer a {
 
 .quick-links a:hover {
   color: #e74c3c;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #f0f4f8, #dce3ea);
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
