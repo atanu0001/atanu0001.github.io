@@ -294,3 +294,158 @@ footer {
   color: #555;
 }
 
+/* --------------------------------------------------*/
+
+/* ===== Base Styling ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0b1d3a 0%, #1b2a4e 100%);
+  color: #ffffff;
+}
+
+/* ===== Container with Blur ===== */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background: rgba(15, 25, 45, 0.6); /* Dark navy blur */
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
+}
+
+/* ===== Profile Image ===== */
+.avatar {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  display: block;
+  margin: auto;
+}
+
+/* ===== Name & Tagline ===== */
+h1 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 2.2rem;
+}
+
+.tagline {
+  text-align: center;
+  font-style: italic;
+  color: #d1d9e6;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Navigation ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== Bio ===== */
+.bio {
+  text-align: justify;
+  line-height: 1.6;
+  color: #e0e6f0;
+}
+
+/* ===== Quick Links ===== */
+.quick-links {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.quick-links a {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  background: #264a82;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin: 0 8px;
+  transition: background 0.3s ease;
+}
+
+.quick-links a:hover {
+  background: #356bb3;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #aeb7c4;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    margin-top: 20px;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .quick-links a {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .bio {
+    font-size: 0.9rem;
+  }
+}
