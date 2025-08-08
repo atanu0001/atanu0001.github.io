@@ -225,3 +225,72 @@ footer {
   font-size: 15px;
   line-height: 1.5;
 }
+
+/* Education Section */
+.education-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.edu-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.edu-card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.edu-card .institution {
+  font-size: 15px;
+  color: #555;
+}
+
+.edu-card .duration {
+  font-size: 14px;
+  color: #777;
+}
+
+.edu-card .extra {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+/* Achievements Section */
+.achievements-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.achievement-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.achievement-card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.achievement-card .details {
+  font-size: 15px;
+  color: #555;
+}
+
