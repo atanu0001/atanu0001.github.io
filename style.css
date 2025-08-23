@@ -300,3 +300,22 @@ footer {
 
 /*-----------------------------------------------------------*/
 
+.edu-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.edu-card ul li {
+  margin: 8px 0;
+}
+
+.edu-card ul li a {
+  text-decoration: none;
+  color: #0056b3;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.edu-card ul li a:hover {
+  color: #ff6600; /* Highlight on hover */
+}
