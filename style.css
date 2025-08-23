@@ -320,13 +320,19 @@ footer {
   color: #ff6600; /* Highlight on hover */
 }
 
-.courses-container {
+.education-section {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allows multiple cards to wrap to next line */
+  gap: 20px;       /* Space between cards */
 }
 
-.course-day {
-  flex: 1 1 300px; /* same width */
-  height: 200px;   /* fixed height for all */
+.edu-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  flex: 1 1 300px;   /* Grow and shrink, with base width 300px */
+  min-height: 250px; /* Set minimum height for uniformity */
+  display: flex;
+  flex-direction: column;
 }
