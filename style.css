@@ -319,3 +319,14 @@ footer {
 .edu-card ul li a:hover {
   color: #ff6600; /* Highlight on hover */
 }
+
+.courses-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.course-day {
+  flex: 1 1 300px; /* same width */
+  height: 200px;   /* fixed height for all */
+}
