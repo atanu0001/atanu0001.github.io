@@ -400,8 +400,8 @@ footer {
 }
 
 .pub-card img {
-  width: 140px;        /* control size */
-  height: 100px;       /* fixed height */
+  width: 170px;        /* control size */
+  height: 120px;       /* fixed height */
   object-fit: cover;   /* crop nicely */
   border-radius: 8px;
   flex-shrink: 0;      /* prevent shrinking */
@@ -436,4 +436,15 @@ body.dark-mode .container {
   margin-top: 6px;
   font-size: 14px;
   color: #666;
+}
+
+
+.authors {
+  white-space: nowrap;   /* keeps everything in one line */
+  overflow: hidden;      /* prevents breaking layout */
+  text-overflow: ellipsis; /* adds "..." if too long */
+}
+
+.me {
+  font-weight: bold;
 }
