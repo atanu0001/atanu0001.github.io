@@ -80,12 +80,26 @@
       </ul>
     </section>
     <section class="Publications">
-      <h2>Courses Taken</h2>
+      <h2>Publications</h2>
       <ul class="course-list">
         <li class="course-card">
-          <a href="courses/math201.html">
-            <strong>From Notes to Keys : A VR learning Environment for Sheet Music Interpretation</strong>   
-            <span>ICDAR (2025)</span>
+          <a href="courses/math201.html" class="pub-card"> 
+            <img src="publication_thumbnails/piano_vr_key.png" alt="Publication Preview">
+            <div class="pub-text">
+              <strong>
+                From Notes to Keys: A VR Learning Environment for Sheet Music Interpretation
+              </strong>
+              <p class="authors">
+                Sandeep Khanna<sup>*</sup>, 
+                <span class="me">Atanu Saha<sup>*</sup></span>, 
+                Rahul Kumar Ray,
+                Rakesh Patibanda,
+                Chiranjoy Chattopadhyay
+              </p>
+              <span class="venue">ICDAR 2025</span>
+              <span class="equal">* Equal Contribution</span>
+            </div>
+
           </a>
         </li>
       </ul>
@@ -96,6 +110,13 @@
       <p>&copy; 2026 Atanu Saha • <a href="mailto:atanus0001@gmail.com">Email Me</a></p>
     </footer>
   </div>
+  <script>
+    const toggleBtn = document.getElementById("dark-mode-toggle");
+
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
 </body>
 </html>
 
