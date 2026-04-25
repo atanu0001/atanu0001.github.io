@@ -6,6 +6,13 @@
   <title>Atanu Saha | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+<script>
+  const toggleBtn = document.getElementById("dark-mode-toggle");
+
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+</script>
 <body>
   <div class="container">
     <img src="img_final.jpeg" alt="Atanu Saha" class="avatar" />

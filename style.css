@@ -378,6 +378,20 @@ footer {
   color: #333;
 }
 
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode a {
+  color: #90caf9;
+}
+
+body.dark-mode .container {
+  background-color: #1e1e1e;
+}
+
 .course-card strong {
   font-size: 18px;
   color: #1a4db3;
