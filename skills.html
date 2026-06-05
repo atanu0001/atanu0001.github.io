@@ -19,6 +19,7 @@
       <a href="projects.html">Projects</a>
       <a href="skills.html" class="active">Skills</a>
       <a href="achievements.html">Achievements</a>
+      <button id="dark-mode-toggle" class="dark-mode-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
     </div>
   </nav>
 
@@ -50,10 +51,10 @@
     <section class="skills-category">
       <h2>Domains</h2>
       <ul>
-        <li>Machine Learning</li>
-        <li>Deep Learning</li>
         <li>Computer Vision</li>
-        <li>Data Structures & Algorithms</li>
+        <li>Optical Music REcognition</li>
+        <li>AR/VR</li>
+        <li>Document Image Analysis</li>
       </ul>
     </section>
   </main>
@@ -62,5 +63,30 @@
   <footer>
     <p>&copy; 2025 Atanu Saha. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    (function () {
+      const toggleBtn = document.getElementById("dark-mode-toggle");
+      const storageKey = "theme";
+
+      function applyTheme(theme) {
+        const isDark = theme === "dark";
+        document.body.classList.toggle("dark-mode", isDark);
+        toggleBtn.textContent = isDark ? "☀️" : "🌙";
+      }
+
+      const saved = window.localStorage.getItem(storageKey);
+      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const initialTheme = saved || (prefersDark ? "dark" : "light");
+      applyTheme(initialTheme);
+
+      toggleBtn.addEventListener("click", () => {
+        const nextTheme = document.body.classList.contains("dark-mode") ? "light" : "dark";
+        window.localStorage.setItem(storageKey, nextTheme);
+        applyTheme(nextTheme);
+      });
+    })();
+  </script>
 </body>
 </html>
+

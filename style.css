@@ -395,9 +395,10 @@ footer {
 
 .pub-card {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 15px;
 }
+
 
 .pub-card img {
   width: 170px;        /* control size */
@@ -413,19 +414,174 @@ footer {
 
 
 
+body {
+  transition: background-color 500ms ease, color 500ms ease;
+}
+
 body.dark-mode {
-  background-color: #121212;
+  background: #121212;
   color: #ffffff;
 }
+
 
 body.dark-mode a {
   color: #90caf9;
 }
 
+/* Navbar + cards + footer */
 body.dark-mode .container {
   background-color: #1e1e1e;
 }
 
+body.dark-mode .navbar {
+  background-color: #141414;
+  border-bottom-color: #2a2a2a;
+}
+
+body.dark-mode .nav-logo {
+  color: #ffffff;
+}
+
+body.dark-mode .nav-links a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .nav-links a:hover,
+body.dark-mode .nav-links a.active {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .page-header {
+  border-bottom-color: #2a2a2a;
+}
+
+body.dark-mode .page-header p,
+body.dark-mode .tagline,
+body.dark-mode .bio,
+body.dark-mode .courses h2,
+body.dark-mode .Publications h2,
+body.dark-mode .education-section h1,
+body.dark-mode .projects-section h1,
+body.dark-mode .skills-section h1,
+body.dark-mode .achievements-section h1 {
+  color: #cfcfcf;
+}
+
+
+
+body.dark-mode .skills-category,
+body.dark-mode .project-card,
+body.dark-mode .edu-card,
+body.dark-mode .achievement-card,
+body.dark-mode .course-card,
+body.dark-mode .education-section,
+body.dark-mode .projects-section,
+body.dark-mode .skills-section,
+body.dark-mode .achievements-section {
+  background-color: #1a1a1a;
+  border-color: #2a2a2a;
+}
+
+body.dark-mode .course-card,
+body.dark-mode .skills-category,
+body.dark-mode .project-card,
+body.dark-mode .edu-card,
+body.dark-mode .achievement-card {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode footer {
+  color: #bdbdbd;
+  border-top-color: #2a2a2a;
+}
+
+body.dark-mode footer a {
+  color: #90caf9;
+}
+
+body.dark-mode .course-card a,
+body.dark-mode .course-card p,
+body.dark-mode .course-card strong,
+body.dark-mode .project-card p,
+body.dark-mode .edu-card .institution,
+body.dark-mode .edu-card .duration,
+body.dark-mode .edu-card .extra,
+body.dark-mode .achievement-card .details,
+body.dark-mode .tagline,
+body.dark-mode .bio {
+  color: inherit;
+}
+
+body.dark-mode .course-card strong,
+body.dark-mode .course-card span {
+  color: inherit;
+  transition: color 400ms ease;
+}
+
+
+body.dark-mode .course-card a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .nav-links a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .nav-links a:hover,
+body.dark-mode .nav-links a.active {
+  background-color: #2a2a2a;
+}
+
+/* Publication typography tweaks in dark mode */
+body.dark-mode .author {
+  color: inherit;
+}
+body.dark-mode .author.me {
+  color: inherit;
+}
+
+
+
+/* Publication layout tweaks */
+.pub-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.pub-card img {
+  width: 170px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.pub-text {
+  flex: 1;
+}
+
+/* Authors row */
+.authors {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  line-height: 1.4;
+}
+
+.author {
+  font-size: 1em;
+  white-space: nowrap;
+}
+
+/* Keep all author names same size; highlight yours */
+.author.me {
+  font-weight: 700;
+}
+
+/* Keep existing course-card styles */
 .course-card strong {
   font-size: 18px;
   color: #1a4db3;
@@ -438,13 +594,23 @@ body.dark-mode .container {
   color: #666;
 }
 
+/* Tab heading / section heading consistency */
+/* Some pages use <h2> or other heading tags inside cards; ensure consistent color in both themes. */
+h1, h2, h3, h4, h5, h6 {
+  color: #222;
+}
 
-.authors {
-  white-space: nowrap;   /* keeps everything in one line */
-  overflow: hidden;      /* prevents breaking layout */
-  text-overflow: ellipsis; /* adds "..." if too long */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #cfcfcf;
 }
 
 .me {
   font-weight: bold;
 }
+
+

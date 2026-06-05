@@ -19,10 +19,12 @@
       <a href="projects.html">Projects</a>
       <a href="skills.html">Skills</a>
       <a href="achievements.html" class="active">Achievements</a>
+      <button id="dark-mode-toggle" class="dark-mode-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
     </div>
   </nav>
 
   <!-- Header -->
+   
   <header class="page-header">
     <h1>Achievements</h1>
     <p>Recognitions and milestones in my academic journey.</p>
@@ -30,6 +32,12 @@
 
   <!-- Achievements Section -->
   <main class="achievements-section">
+    <div class="achievement-card">
+      <h2>GATE DA (2026) Qualified</h2>
+      <p class="details">All India Rank 2159</p>
+      <p class="details">GATE Score: 522</p>
+    </div>
+
     <div class="achievement-card">
       <h2>CR Rao Statistics Olympiad</h2>
       <p class="details">Rank 4 (AIR 2) – 2020</p>
@@ -50,5 +58,30 @@
   <footer>
     <p>&copy; 2025 Atanu Saha. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    (function () {
+      const toggleBtn = document.getElementById("dark-mode-toggle");
+      const storageKey = "theme";
+
+      function applyTheme(theme) {
+        const isDark = theme === "dark";
+        document.body.classList.toggle("dark-mode", isDark);
+        toggleBtn.textContent = isDark ? "☀️" : "🌙";
+      }
+
+      const saved = window.localStorage.getItem(storageKey);
+      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const initialTheme = saved || (prefersDark ? "dark" : "light");
+      applyTheme(initialTheme);
+
+      toggleBtn.addEventListener("click", () => {
+        const nextTheme = document.body.classList.contains("dark-mode") ? "light" : "dark";
+        window.localStorage.setItem(storageKey, nextTheme);
+        applyTheme(nextTheme);
+      });
+    })();
+  </script>
 </body>
 </html>
+

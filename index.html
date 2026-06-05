@@ -6,13 +6,13 @@
   <title>Atanu Saha | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<script>
+<!-- <script>
   const toggleBtn = document.getElementById("dark-mode-toggle");
 
   toggleBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
   });
-</script>
+</script> -->
 <body>
   <div class="container">
     <img src="img_final.jpeg" alt="Atanu Saha" class="avatar" />
@@ -23,7 +23,7 @@
       <a href="projects.html">Projects</a>
       <a href="skills.html">Skills</a>
       <a href="achievements.html">Achievements</a>
-      <button id="dark-mode-toggle">🌙 Dark Mode</button>
+      <button id="dark-mode-toggle" class="dark-mode-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
     </nav>
     <p class="bio">
       I'm a data enthusiast with a strong foundation in statistics and machine learning. I enjoy building intuitive tools, analyzing patterns, and crafting elegant solutions through code.
@@ -72,11 +72,11 @@
                 From Notes to Keys: A VR Learning Environment for Sheet Music Interpretation
               </strong>
               <p class="authors">
-                Sandeep Khanna<sup>*</sup>, 
-                <span class="me">Atanu Saha<sup>*</sup></span>, 
-                Rahul Kumar Ray,
-                Rakesh Patibanda,
-                Chiranjoy Chattopadhyay
+                <span class="author">Sandeep Khanna<sup>*</sup></span>,
+                <span class="author me">Atanu Saha<sup>*</sup></span>,
+                <span class="author">Rahul Kumar Ray</span>,
+                <span class="author">Rakesh Patibanda</span>,
+                <span class="author">Chiranjoy Chattopadhyay</span>
               </p>
               <span class="venue">ICDAR 2025</span>
               <span class="equal">* Equal Contribution</span>
@@ -93,11 +93,27 @@
     </footer>
   </div>
   <script>
-    const toggleBtn = document.getElementById("dark-mode-toggle");
+    (function () {
+      const toggleBtn = document.getElementById("dark-mode-toggle");
+      const storageKey = "theme";
 
-    toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-    });
+      function applyTheme(theme) {
+        const isDark = theme === "dark";
+        document.body.classList.toggle("dark-mode", isDark);
+        toggleBtn.textContent = isDark ? "☀️" : "🌙";
+      }
+
+      const saved = window.localStorage.getItem(storageKey);
+      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const initialTheme = saved || (prefersDark ? "dark" : "light");
+      applyTheme(initialTheme);
+
+      toggleBtn.addEventListener("click", () => {
+        const nextTheme = document.body.classList.contains("dark-mode") ? "light" : "dark";
+        window.localStorage.setItem(storageKey, nextTheme);
+        applyTheme(nextTheme);
+      });
+    })();
   </script>
 </body>
 </html>
